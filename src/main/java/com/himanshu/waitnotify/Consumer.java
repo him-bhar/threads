@@ -8,7 +8,7 @@ public class Consumer extends Thread {
 			synchronized (SharedProducerConsumerResource.getInstance()) {
 				//We have got some data to process
 				while (SharedProducerConsumerResource.getInstance().size() == 0) {
-					System.out.println(getName() + " - Consumer is FULL!!!");
+					System.out.println(getName() + " - Consumer is EMPTY!!!");
 					try {
 						SharedProducerConsumerResource.getInstance().wait();
 					} catch (InterruptedException e) {
