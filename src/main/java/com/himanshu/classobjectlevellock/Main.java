@@ -15,6 +15,7 @@
 */
 package com.himanshu.classobjectlevellock;
 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -38,8 +39,23 @@ public class Main {
 			};
 		};
 
+		Thread t3 = new Thread() {
+			public void run() {
+				//norClass.objectLockMethodSynch();
+				norClass.objectLockMethodSynch();
+			};
+		};
+
+		Thread t4 = new Thread() {
+			public void run() {
+				NormalClass.classLockMethodSynch();
+			};
+		};
+
 		t1.start();
 		t2.start();
+		t3.start();
+		t4.start();
 	}
 
 }
