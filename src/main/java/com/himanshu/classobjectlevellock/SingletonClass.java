@@ -10,7 +10,7 @@ public class SingletonClass {
 		if (shared == null) {
 			shared = new ArrayList<String>();
 		} else {
-			//NOOP
+			//NOOP0
 		}
 		return shared;
 	}
